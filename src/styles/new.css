@@ -1,0 +1,288 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f4f4f9;
+    padding: 20px;
+    font-size: 16px;
+  }
+  
+  /* Main Invoice Form */
+  .invoice-form {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  header h2 {
+    font-size: 28px;
+    color: #961515;
+    margin-bottom: 10px;
+  }
+  
+  header div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  header label {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+    flex: 1;
+  }
+  
+  header input[type="text"],
+  header input[type="number"],
+  header input[type="date"],
+  header select {
+    /**/
+    width:78%;
+    padding: 10px;
+    margin: 5px 0;
+    height: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    justify-content: space-between;
+  }
+  
+  
+  /* Bill Details Section */
+  .billing-info {
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+                               display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .billing-info div {
+    flex: 1;
+  }
+  
+  .billing-info input{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Items Section */
+  .items {
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+    }
+  
+  .item-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .data {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+    padding: 8px;
+    width: 100%;
+  }
+  
+  .num {
+    margin-right: 10px;
+    padding: 8px;
+    width: 80px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .items button {
+    margin-top: 4px;
+    padding: 9px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .items button:hover {
+    background-color: #0056b3;
+  }
+  
+  .item-row button {
+    border-radius: 50px;
+    padding: 7px 13px;
+  }
+  
+  .item-row button:hover {
+    background-color: #ee353b;
+  }
+  
+  /* Review Section */
+  .review-invoice {
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+  }
+  
+  .review-invoice h3 
+  {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .review-invoice div {
+    font-size: 14px;
+    color: #333;
+    margin-right: 10px;
+  }
+  
+  .review-invoice select,
+  /* .review-invoice input[type="number"] { or */
+  .review-invoice input {
+    width: 48%;
+    padding: 10px 4px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+  }
+  
+  
+  /* .review-invoice div   only element (selector) from class
+  {
+  
+    background-color: #0056b3;
+  } */
+  /* Total Section */
+  .total-bill-generator {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* background-color: #e9f7e9;; */
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+  }
+  
+  .total-bill-generator h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .generate-pdf-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .generate-pdf-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Bill Preview Section */
+  .bill-section {
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bill-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .bill-from, .bill-to {
+    width: 48%;
+  }
+  
+  .bill-from h4, .bill-to h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .bill-from p, .bill-to p {
+    font-size: 14px;
+    color: #666;
+  }
+  .x{
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;}
+   
+  .bill-section h3 {
+    font-size: 24px;
+    color: #333;
+  }
+  /* Responsive Design */
+  @media (max-width: 730px) {
+    .billing-info {
+      flex-direction:column ;
+      gap: 10px;
+    }
+    header h2 {
+      font-size: 22px;
+    }
+  
+  .bill-from , .bill-to {
+    width: 100%;}
+  
+    header input{
+                    display: flex;
+    }
+    header div {
+      flex-direction: column;
+    }
+  
+    .review-invoice select,
+    .review-invoice input {
+      width: 100%;
+      font-size: 14px;
+    }
+  
+    .item-row {
+      flex-direction: column ;
+      gap: 5px;
+    }
+  
+    .item-row .num {
+      width: 100%;
+    }
+    
+    .generate-pdf-btn {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+  
+  
