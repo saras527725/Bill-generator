@@ -66,12 +66,14 @@ function InvoiceForm() {
         doc.addPage();
         yPos = 20; // Reset vertical position
       }
-  
+      const rate = Number(item.rate);// updated
       doc.text(`${index + 1}. ${item.name}`, 10, yPos);
       doc.text(`Description: ${item.description}`, 40, yPos);
       doc.text(`Quantity: ${item.quantity}`, 120, yPos);
-      doc.text(`Rate: ${currency} ${item.rate.toFixed(2)}`, 150, yPos);
+      doc.text(`Rate: ${currency} ${!isNaN(rate) ? rate.toFixed(2) : 'N/A'}`, 150, yPos);
+      // doc.text(`Rate: ${currency} ${item.rate.toFixed(2)}`, 150, yPos);
       yPos += 10;
+      console.log("ss",item.rate, typeof item.rate);
     });
   
     // Totals
@@ -79,7 +81,7 @@ function InvoiceForm() {
       doc.addPage();
       yPos = 20;
     }
-  
+
     const subtotal = items.reduce((sum, item) => sum + item.quantity * item.rate, 0);
     const discount = (subtotal * discountRate) / 100;
     const tax = ((subtotal - discount) * taxRate) / 100;
